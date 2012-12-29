@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface HHCompatibility : NSObject
-
+- (BOOL)respondsToFunction:(NSString *)aFunctionName inFramwork:(NSString *)aFrameworkName;
+- (id)performFunction:(NSString *)aFunctionName inFramwork:(NSString *)aFrameworkName;
 @end

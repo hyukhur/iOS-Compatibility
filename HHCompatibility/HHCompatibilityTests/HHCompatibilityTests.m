@@ -7,6 +7,7 @@
 //
 
 #import "HHCompatibilityTests.h"
+#import "HHCompatibility.h"
 
 @implementation HHCompatibilityTests
 
@@ -24,9 +25,14 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testPerformFunction
 {
-    STFail(@"Unit tests are not implemented yet in HHCompatibilityTests");
+    HHCompatibility *instance = [[HHCompatibility alloc] init];
+    STAssertTrue([instance respondsToFunction:@"ABAddressBookGetAuthorizationStatus" inFramwork:@"/System/Library/Frameworks/AddressBook.framework/AddressBook"], @"Function Load Fail");
+
+    void *result = [[instance performFunction:@"ABAddressBookGetAuthorizationStatus" inFramwork:@"/System/Library/Frameworks/AddressBook.framework/AddressBook"] pointerValue];
+    int resultValue = (int)result;
+    STAssertEquals(resultValue, 3, @"");
 }
 
 @end

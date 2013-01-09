@@ -11,11 +11,11 @@
 		4D4A30AE168EB459003F8FD3 /* HHCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D4A30AD168EB459003F8FD3 /* HHCompatibility.h */; };
 		4D4A30B0168EB459003F8FD3 /* HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A30AF168EB459003F8FD3 /* HHCompatibility.m */; };
 		4D4A30B8168EB459003F8FD3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4A30B7168EB459003F8FD3 /* SenTestingKit.framework */; };
-		4D4A30BA168EB45A003F8FD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4A30B9168EB459003F8FD3 /* UIKit.framework */; };
 		4D4A30BB168EB45A003F8FD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4A30A8168EB459003F8FD3 /* Foundation.framework */; };
 		4D4A30BE168EB45A003F8FD3 /* libHHCompatibility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4A30A5168EB459003F8FD3 /* libHHCompatibility.a */; };
 		4D4A30C4168EB45A003F8FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A30C2168EB45A003F8FD3 /* InfoPlist.strings */; };
 		4D4A30C7168EB45A003F8FD3 /* HHCompatibilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A30C6168EB45A003F8FD3 /* HHCompatibilityTests.m */; };
+		4DFB2AA1169DA49A0095A290 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB2AA0169DA49A0095A290 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +49,11 @@
 		4D4A30AF168EB459003F8FD3 /* HHCompatibility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCompatibility.m; sourceTree = "<group>"; };
 		4D4A30B6168EB459003F8FD3 /* HHCompatibilityTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHCompatibilityTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4A30B7168EB459003F8FD3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4D4A30B9168EB459003F8FD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		4D4A30C1168EB45A003F8FD3 /* HHCompatibilityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HHCompatibilityTests-Info.plist"; sourceTree = "<group>"; };
 		4D4A30C3168EB45A003F8FD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D4A30C5168EB45A003F8FD3 /* HHCompatibilityTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCompatibilityTests.h; sourceTree = "<group>"; };
 		4D4A30C6168EB45A003F8FD3 /* HHCompatibilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCompatibilityTests.m; sourceTree = "<group>"; };
+		4DFB2AA0169DA49A0095A290 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFB2AA1169DA49A0095A290 /* UIKit.framework in Frameworks */,
 				4D4A30A9168EB459003F8FD3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,9 +71,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4A30B8168EB459003F8FD3 /* SenTestingKit.framework in Frameworks */,
-				4D4A30BA168EB45A003F8FD3 /* UIKit.framework in Frameworks */,
 				4D4A30BB168EB45A003F8FD3 /* Foundation.framework in Frameworks */,
 				4D4A30BE168EB45A003F8FD3 /* libHHCompatibility.a in Frameworks */,
+				4DFB2AA2169DA4AC0095A290 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +102,9 @@
 		4D4A30A7168EB459003F8FD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DFB2AA0169DA49A0095A290 /* UIKit.framework */,
 				4D4A30A8168EB459003F8FD3 /* Foundation.framework */,
 				4D4A30B7168EB459003F8FD3 /* SenTestingKit.framework */,
-				4D4A30B9168EB459003F8FD3 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -299,7 +300,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -319,7 +320,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -329,6 +330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/HHCompatibility.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HHCompatibility/HHCompatibility-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -341,6 +346,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/HHCompatibility.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HHCompatibility/HHCompatibility-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -398,6 +407,7 @@
 				4D4A30CC168EB45A003F8FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D4A30CD168EB45A003F8FD3 /* Build configuration list for PBXNativeTarget "HHCompatibilityTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +416,7 @@
 				4D4A30CF168EB45A003F8FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,14 +11,14 @@
 #import <string.h>
 #import <objc/runtime.h>
 
-#define THREE_WAY_PASTER_INNER(a, b, c) a ## b ## c
-#define THREE_WAY_PASTER(x,y,z) THREE_WAY_PASTER_INNER(x,y,z)
+#define HH_THREE_WAY_PASTER_INNER(a, b, c) a ## b ## c
+#define HH_THREE_WAY_PASTER(x,y,z) HH_THREE_WAY_PASTER_INNER(x,y,z)
 
 
-#define SYNTHESIZE_ASSOCIATED_PROPERTY(aClassType, aSetter, aGetter, aAssociationPolicyType)\
-SYNTHESIZE_ASSOCIATED_PROPERTY__(aClassType, aSetter, aGetter, aAssociationPolicyType, THREE_WAY_PASTER(kAssociatedObjectKeyFor_, aGetter, __LINE__))
+#define HH_SYNTHESIZE_ASSOCIATED_PROPERTY(aClassType, aSetter, aGetter, aAssociationPolicyType)\
+HH_SYNTHESIZE_ASSOCIATED_PROPERTY__(aClassType, aSetter, aGetter, aAssociationPolicyType, HH_THREE_WAY_PASTER(kAssociatedObjectKeyFor_, aGetter, __LINE__))
 
-#define SYNTHESIZE_ASSOCIATED_PROPERTY__(aClassType, aSetter, aGetter, aAssociationPolicyType, aAssociatedObjectKey)\
+#define HH_SYNTHESIZE_ASSOCIATED_PROPERTY__(aClassType, aSetter, aGetter, aAssociationPolicyType, aAssociatedObjectKey)\
 static char aAssociatedObjectKey;                                                                                   \
 - (void)aSetter:(aClassType)aAssociatedObject                                                                       \
 {                                                                                                                   \

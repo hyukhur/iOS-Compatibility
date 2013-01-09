@@ -16,6 +16,7 @@
 		4D4A30C4168EB45A003F8FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A30C2168EB45A003F8FD3 /* InfoPlist.strings */; };
 		4D4A30C7168EB45A003F8FD3 /* HHCompatibilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A30C6168EB45A003F8FD3 /* HHCompatibilityTests.m */; };
 		4DFB2AA1169DA49A0095A290 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB2AA0169DA49A0095A290 /* UIKit.framework */; };
+		4DFB2AA5169DA4D90095A290 /* UIViewController+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		4D4A30C5168EB45A003F8FD3 /* HHCompatibilityTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCompatibilityTests.h; sourceTree = "<group>"; };
 		4D4A30C6168EB45A003F8FD3 /* HHCompatibilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCompatibilityTests.m; sourceTree = "<group>"; };
 		4DFB2AA0169DA49A0095A290 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4DFB2AA3169DA4D90095A290 /* UIViewController+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HHCompatibility.h"; path = "HHCompatibility/UIViewController+HHCompatibility.h"; sourceTree = "<group>"; };
+		4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HHCompatibility.m"; path = "HHCompatibility/UIViewController+HHCompatibility.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		4D4A309A168EB459003F8FD3 = {
 			isa = PBXGroup;
 			children = (
+				4DFB2AA6169DA4FA0095A290 /* UIKit */,
 				4D4A30AA168EB459003F8FD3 /* HHCompatibility */,
 				4D4A30BF168EB45A003F8FD3 /* HHCompatibilityTests */,
 				4D4A30A7168EB459003F8FD3 /* Frameworks */,
@@ -144,6 +148,15 @@
 				4D4A30C2168EB45A003F8FD3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DFB2AA6169DA4FA0095A290 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				4DFB2AA3169DA4D90095A290 /* UIViewController+HHCompatibility.h */,
+				4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */,
+			);
+			name = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4A30B0168EB459003F8FD3 /* HHCompatibility.m in Sources */,
+				4DFB2AA5169DA4D90095A290 /* UIViewController+HHCompatibility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

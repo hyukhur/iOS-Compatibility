@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+platform :ios
+xcodeproj 'HHCompatibility'
+
+
+pod 'CocoaLumberjack'    # logging
+
+
+target :test, :exclusive => true do
+    link_with 'HHCompatibility'
+    pod 'GHUnitIOS'  # Test Framework for Objective-C.
+    pod 'OCHamcrest' # Hamcrest for Objective-C: Powerful, combinable, extensible matchers for verification.
+    pod 'OCMock'     # OCMock is an Objective-C implementation of mock objects
+end
+
+

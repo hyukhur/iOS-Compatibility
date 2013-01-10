@@ -61,6 +61,7 @@
 		4DFB2AA0169DA49A0095A290 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4DFB2AA3169DA4D90095A290 /* UIViewController+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HHCompatibility.h"; path = "HHCompatibility/UIViewController+HHCompatibility.h"; sourceTree = "<group>"; };
 		4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HHCompatibility.m"; path = "HHCompatibility/UIViewController+HHCompatibility.m"; sourceTree = "<group>"; };
+		4DFC56D7169ECA2600D977DE /* CocoaPods.podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = CocoaPods.podfile; sourceTree = "<group>"; };
 		8157DEAD2F714181860CEB74 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9678CF6F53E0438EBD7396B6 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,6 +101,7 @@
 				4D4A30A6168EB459003F8FD3 /* Products */,
 				1EEF1B252B524F2C886BF9BA /* Pods-test.xcconfig */,
 				13B0D252C5744FB2B22C963D /* Pods.xcconfig */,
+				4DFC56D7169ECA2600D977DE /* CocoaPods.podfile */,
 			);
 			sourceTree = "<group>";
 		};

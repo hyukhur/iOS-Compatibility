@@ -11,6 +11,7 @@
 #import <string.h>
 #import <objc/runtime.h>
 
+
 #define HH_THREE_WAY_PASTER_INNER(a, b, c) a ## b ## c
 #define HH_THREE_WAY_PASTER(x,y,z) HH_THREE_WAY_PASTER_INNER(x,y,z)
 
@@ -141,21 +142,39 @@ void HHMethodAdding(Class aClass, BOOL aIsInstance, SEL aOriginalSelector, SEL a
 }
 
 
+@implementation HHCompatibility (HHPrivate)
+
+- (NSString *)validFrameworkName:(NSString *)originalName
+{
+    NSString *frameworkName = originalName;
+    if ([[frameworkName pathExtension] isEqualToString:@"framework"])
+    {
+        frameworkName = [frameworkName stringByAppendingPathComponent:[[[frameworkName pathComponents] lastObject] stringByReplacingOccurrencesOfString:@".framework" withString:@""]];
+    }
+    if (![frameworkName hasPrefix:@"/System/Library/Frameworks/"])
+    {
+        frameworkName = [NSString stringWithFormat:@"/System/Library/Frameworks/%@", frameworkName];
+    }
+    return frameworkName;
+}
+
+@end
+
+
 @implementation HHCompatibility
 
 
 - (BOOL)respondsToFunction:(NSString *)aFunctionName inFramwork:(NSString *)aFrameworkName
 {
+    NSString *sFrameworkName = [self validFrameworkName:aFrameworkName];
     void *(*function_handle)(void) = NULL;
-    void *framework_handle = dlopen(aFrameworkName.UTF8String, RTLD_LAZY);
-    if (framework_handle)
-    {
-        *(void **)&function_handle = dlsym(framework_handle, aFunctionName.UTF8String);
-    }
-    else
+    void *framework_handle = dlopen(sFrameworkName.UTF8String, RTLD_LAZY);
+    if (framework_handle == NULL)
     {
         NSLog(@"Unable to open framework:%@ %s\n", aFrameworkName, dlerror());
+        return NO;
     }
+    *(void **)&function_handle = dlsym(framework_handle, aFunctionName.UTF8String);
     dlclose(framework_handle);
     return function_handle != NULL;
 }
@@ -163,23 +182,22 @@ void HHMethodAdding(Class aClass, BOOL aIsInstance, SEL aOriginalSelector, SEL a
 
 - (id)performFunction:(NSString *)aFunctionName inFramwork:(NSString *)aFrameworkName
 {
+    NSString *sFrameworkName = [self validFrameworkName:aFrameworkName];
     void *(*function_handle)(void) = NULL;
-    void *framework_handle = dlopen(aFrameworkName.UTF8String, RTLD_LAZY);
-    if (framework_handle)
-    {
-        *(void **)&function_handle = dlsym(framework_handle, aFunctionName.UTF8String);
-    }
-    else
+    void *framework_handle = dlopen(sFrameworkName.UTF8String, RTLD_LAZY);
+    if (framework_handle == NULL)
     {
         NSLog(@"Unable to open framework:%@ %s\n", aFrameworkName, dlerror());
+        return nil;
     }
+    *(void **)&function_handle = dlsym(framework_handle, aFunctionName.UTF8String);
     dlclose(framework_handle);
-    if (function_handle != NULL)
+    if (function_handle == NULL)
     {
-        void *result = (*function_handle)();
-        return [NSValue valueWithPointer:result];
+        return nil;
     }
-    return nil;
+    void *result = (*function_handle)();
+    return [NSValue valueWithPointer:result];
 }
 
 

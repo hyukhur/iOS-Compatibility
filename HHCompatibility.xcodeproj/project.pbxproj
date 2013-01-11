@@ -15,7 +15,7 @@
 		4D4A30BB168EB45A003F8FD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4A30A8168EB459003F8FD3 /* Foundation.framework */; };
 		4D4A30BE168EB45A003F8FD3 /* libHHCompatibility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4A30A5168EB459003F8FD3 /* libHHCompatibility.a */; };
 		4D4A30C4168EB45A003F8FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A30C2168EB45A003F8FD3 /* InfoPlist.strings */; };
-		4D4A30C7168EB45A003F8FD3 /* HHCompatibilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A30C6168EB45A003F8FD3 /* HHCompatibilityTests.m */; };
+		4D4A30C7168EB45A003F8FD3 /* HHCompatibilityCallSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A30C6168EB45A003F8FD3 /* HHCompatibilityCallSpec.m */; };
 		4D4CF97316A00D5200C9BEC1 /* UIViewController+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */; };
 		4D85160616A02A1800558FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB2AA0169DA49A0095A290 /* UIKit.framework */; };
 		4D85162516A02CCB00558FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D85162416A02CCB00558FB3 /* CoreGraphics.framework */; };
@@ -59,8 +59,7 @@
 		4D4A30B7168EB459003F8FD3 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4D4A30C1168EB45A003F8FD3 /* HHCompatibilityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HHCompatibilityTests-Info.plist"; sourceTree = "<group>"; };
 		4D4A30C3168EB45A003F8FD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4D4A30C5168EB45A003F8FD3 /* HHCompatibilityTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCompatibilityTests.h; sourceTree = "<group>"; };
-		4D4A30C6168EB45A003F8FD3 /* HHCompatibilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCompatibilityTests.m; sourceTree = "<group>"; };
+		4D4A30C6168EB45A003F8FD3 /* HHCompatibilityCallSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCompatibilityCallSpec.m; sourceTree = "<group>"; };
 		4D85162416A02CCB00558FB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4DFB2AA0169DA49A0095A290 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4DFB2AA3169DA4D90095A290 /* UIViewController+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HHCompatibility.h"; path = "HHCompatibility/UIViewController+HHCompatibility.h"; sourceTree = "<group>"; };
@@ -153,8 +152,7 @@
 		4D4A30BF168EB45A003F8FD3 /* HHCompatibilityTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D4A30C5168EB45A003F8FD3 /* HHCompatibilityTests.h */,
-				4D4A30C6168EB45A003F8FD3 /* HHCompatibilityTests.m */,
+				4D4A30C6168EB45A003F8FD3 /* HHCompatibilityCallSpec.m */,
 				4D4A30C0168EB45A003F8FD3 /* Supporting Files */,
 			);
 			path = HHCompatibilityTests;
@@ -316,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D4A30C7168EB45A003F8FD3 /* HHCompatibilityTests.m in Sources */,
+				4D4A30C7168EB45A003F8FD3 /* HHCompatibilityCallSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

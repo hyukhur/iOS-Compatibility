@@ -3,18 +3,18 @@
 #import "UIViewController+HHCompatibility.h"
 #import <objc/runtime.h>
 
-// class_getMethodImplementation()
-//method_setImplementation(methodToRemove, forwardingIMP);
 
 void removeMethod(id aInstance, SEL beRemovedMethodSelector)
 {
     if ([aInstance respondsToSelector:beRemovedMethodSelector])
     {
-        Method beRemovdMethod = class_getInstanceMethod(aInstance, beRemovedMethodSelector);
-        IMP forwardingIMP = method_getImplementation(class_getInstanceMethod(aInstance, @selector(forwardInvocation:)));
-        method_setImplementation(beRemovdMethod, forwardingIMP);        
+        Class class = object_getClass(aInstance);
+        Method beRemovdMethod = class_getInstanceMethod(class, beRemovedMethodSelector);
+        IMP forwardingIMP = class_getMethodImplementation(class, @selector(forwardInvocation:));
+        method_setImplementation(beRemovdMethod, forwardingIMP);
     }
 }
+
 
 SPEC_BEGIN(UIViewControllerSpec)
 describe(@"UIViewController Compatibility Spec", ^{

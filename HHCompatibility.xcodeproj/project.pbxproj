@@ -21,6 +21,10 @@
 		4D85162516A02CCB00558FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D85162416A02CCB00558FB3 /* CoreGraphics.framework */; };
 		4D85162716A02CD600558FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D85162416A02CCB00558FB3 /* CoreGraphics.framework */; };
 		4D8516B316A13F5200558FB3 /* UIViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8516B216A13F5200558FB3 /* UIViewControllerSpec.m */; };
+		4DC2C16C16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2C16B16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m */; };
+		4DC2C16D16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2C16B16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m */; };
+		4DC2C16F16AB0364007FDADD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC2C16E16AB0364007FDADD /* AssetsLibrary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4DC2C17016AB036E007FDADD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC2C16E16AB0364007FDADD /* AssetsLibrary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4DFB2AA1169DA49A0095A290 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB2AA0169DA49A0095A290 /* UIKit.framework */; };
 		674D8970DF4E4B59B4AB5952 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A71FB6FA8DF4A08AE9BC5AA /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +67,9 @@
 		4D4A30C6168EB45A003F8FD3 /* HHCompatibilityCallSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCompatibilityCallSpec.m; sourceTree = "<group>"; };
 		4D85162416A02CCB00558FB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4D8516B216A13F5200558FB3 /* UIViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerSpec.m; sourceTree = "<group>"; };
+		4DC2C16A16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetRepresentation+HHCompatibility.h"; sourceTree = "<group>"; };
+		4DC2C16B16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetRepresentation+HHCompatibility.m"; sourceTree = "<group>"; };
+		4DC2C16E16AB0364007FDADD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4DFB2AA0169DA49A0095A290 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4DFB2AA3169DA4D90095A290 /* UIViewController+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HHCompatibility.h"; path = "HHCompatibility/UIViewController+HHCompatibility.h"; sourceTree = "<group>"; };
 		4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HHCompatibility.m"; path = "HHCompatibility/UIViewController+HHCompatibility.m"; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC2C16F16AB0364007FDADD /* AssetsLibrary.framework in Frameworks */,
 				4D85162516A02CCB00558FB3 /* CoreGraphics.framework in Frameworks */,
 				4DFB2AA1169DA49A0095A290 /* UIKit.framework in Frameworks */,
 				4D4A30A9168EB459003F8FD3 /* Foundation.framework in Frameworks */,
@@ -92,6 +100,7 @@
 				674D8970DF4E4B59B4AB5952 /* libPods-test.a in Frameworks */,
 				4D85160616A02A1800558FB3 /* UIKit.framework in Frameworks */,
 				4D85162716A02CD600558FB3 /* CoreGraphics.framework in Frameworks */,
+				4DC2C17016AB036E007FDADD /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,7 @@
 		4D4A309A168EB459003F8FD3 = {
 			isa = PBXGroup;
 			children = (
+				4DC2C16916AB021E007FDADD /* AssetsLibrary */,
 				4DFB2AA6169DA4FA0095A290 /* UIKit */,
 				4D4A30AA168EB459003F8FD3 /* HHCompatibility */,
 				4D4A30BF168EB45A003F8FD3 /* HHCompatibilityTests */,
@@ -123,6 +133,7 @@
 		4D4A30A7168EB459003F8FD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DC2C16E16AB0364007FDADD /* AssetsLibrary.framework */,
 				4D85162416A02CCB00558FB3 /* CoreGraphics.framework */,
 				4DFB2AA0169DA49A0095A290 /* UIKit.framework */,
 				4D4A30A8168EB459003F8FD3 /* Foundation.framework */,
@@ -168,6 +179,16 @@
 				4D4A30C2168EB45A003F8FD3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DC2C16916AB021E007FDADD /* AssetsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				4DC2C16A16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.h */,
+				4DC2C16B16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m */,
+			);
+			name = AssetsLibrary;
+			path = HHCompatibility;
 			sourceTree = "<group>";
 		};
 		4DFB2AA6169DA4FA0095A290 /* UIKit */ = {
@@ -310,6 +331,7 @@
 			files = (
 				4D4A30B0168EB459003F8FD3 /* HHCompatibility.m in Sources */,
 				4D4CF97316A00D5200C9BEC1 /* UIViewController+HHCompatibility.m in Sources */,
+				4DC2C16C16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +341,7 @@
 			files = (
 				4D4A30C7168EB45A003F8FD3 /* HHCompatibilityCallSpec.m in Sources */,
 				4D8516B316A13F5200558FB3 /* UIViewControllerSpec.m in Sources */,
+				4DC2C16D16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

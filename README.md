@@ -1,4 +1,4 @@
 iOS-Compatibility
 =================
 
-iOS-Compatibility supports iOS API Compatibility in the runtime and has some Compatibility tools.
+we supports iOS API Compatibility with the slow and rough implementations in the runtime, and has some Compatibility tools.

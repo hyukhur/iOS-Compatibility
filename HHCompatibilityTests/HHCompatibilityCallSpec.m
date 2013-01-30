@@ -81,13 +81,13 @@ describe(@"HHCompatibility", ^{
             [[theValue([variable apiMethod]) should] beTrue];
         });
 
-        it(@"call the method in old SDK but deprecated in new SDK", ^{
+        pending(@"call the method in old SDK but deprecated in new SDK", ^{
 #warning TODO kiwi can not record method calling.
 //            [[variable should] receive:@selector(oldAPIDeprecatedMethod)];
             [[theValue([variable hhOrigin_oldAPIDeprecatedMethod]) should] beTrue];
         });
 
-        it(@"call the method in new SDK but not in old SDK", ^{
+        pending(@"call the method in new SDK but not in old SDK", ^{
 #warning TODO kiwi can not record method calling.
 //            [[variable should] receive:@selector(hh_newAPIMethodButNotInOldSDK)];
             [[theValue([variable newAPIMethodButNotInOldSDK]) should] beTrue];

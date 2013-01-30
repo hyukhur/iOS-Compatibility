@@ -45,8 +45,10 @@ static char aAssociatedObjectKey;                                               
 
 
 
-static NSString *kMethodPrefix = @"hh_";
-static NSString *kOriginMethodPrefix = @"hhOrigin_";
+#define kMethodPrefix @"hh_"
+#define kInitMethodPrefix @"initHH_"
+#define kOriginInitMethodPrefix @"init"
+#define kOriginMethodPrefix @"hhOrigin_"
 
 @implementation NSObject (HHCompatibility)
 
@@ -70,7 +72,15 @@ static NSString *kOriginMethodPrefix = @"hhOrigin_";
             return;
         }
     }
-    sSelector = NSSelectorFromString([kMethodPrefix stringByAppendingString:sSelectorName]);
+    if ([sSelectorName hasPrefix:kOriginInitMethodPrefix])
+    {
+        sSelectorName = [sSelectorName stringByReplacingOccurrencesOfString:kOriginInitMethodPrefix withString:kInitMethodPrefix options:0 range:NSMakeRange(0, 4)];
+    }
+    else
+    {
+        sSelectorName = [kMethodPrefix stringByAppendingString:sSelectorName];
+    }
+    sSelector = NSSelectorFromString(sSelectorName);
     if ([self respondsToSelector:sSelector])
     {
         [anInvocation setSelector:sSelector];
@@ -101,7 +111,15 @@ static NSString *kOriginMethodPrefix = @"hhOrigin_";
             return sSignature;
         }
     }
-    sSelector = NSSelectorFromString([kMethodPrefix stringByAppendingString:sSelectorName]);
+    if ([sSelectorName hasPrefix:kOriginInitMethodPrefix])
+    {
+        sSelectorName = [sSelectorName stringByReplacingOccurrencesOfString:kOriginInitMethodPrefix withString:kInitMethodPrefix options:0 range:NSMakeRange(0, 3)];
+    }
+    else
+    {
+        sSelectorName = [kMethodPrefix stringByAppendingString:sSelectorName];
+    }
+    sSelector = NSSelectorFromString(sSelectorName);
     sSignature = [self hh_methodSignatureForSelector:sSelector];
     if (sSignature)
     {
@@ -202,7 +220,7 @@ void HHMethodAdding(Class aClass, BOOL aIsInstance, SEL aOriginalSelector, SEL a
 
 
 
-+ (void)initialize
++ (void)load
 {
     if ([NSObject instanceMethodForSelector:@selector(hh_methodSignatureForSelector:)] != [@"" methodForSelector:@selector(methodSignatureForSelector:)])
     {

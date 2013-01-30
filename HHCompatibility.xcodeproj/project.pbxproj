@@ -17,6 +17,10 @@
 		4D4A30C4168EB45A003F8FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A30C2168EB45A003F8FD3 /* InfoPlist.strings */; };
 		4D4A30C7168EB45A003F8FD3 /* HHCompatibilityCallSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A30C6168EB45A003F8FD3 /* HHCompatibilityCallSpec.m */; };
 		4D4CF97316A00D5200C9BEC1 /* UIViewController+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */; };
+		4D506D3D16B939450042582B /* UIImage+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D506D3C16B939450042582B /* UIImage+HHCompatibility.m */; };
+		4D506D3E16B939450042582B /* UIImage+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D506D3C16B939450042582B /* UIImage+HHCompatibility.m */; };
+		4D506D4116B94D270042582B /* UIImageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D506D4016B94D270042582B /* UIImageSpec.m */; };
+		4D506D4316B94D9F0042582B /* myGirl.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4D506D4216B94D9F0042582B /* myGirl.JPG */; };
 		4D85160616A02A1800558FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB2AA0169DA49A0095A290 /* UIKit.framework */; };
 		4D85162516A02CCB00558FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D85162416A02CCB00558FB3 /* CoreGraphics.framework */; };
 		4D85162716A02CD600558FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D85162416A02CCB00558FB3 /* CoreGraphics.framework */; };
@@ -65,6 +69,10 @@
 		4D4A30C1168EB45A003F8FD3 /* HHCompatibilityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HHCompatibilityTests-Info.plist"; sourceTree = "<group>"; };
 		4D4A30C3168EB45A003F8FD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D4A30C6168EB45A003F8FD3 /* HHCompatibilityCallSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCompatibilityCallSpec.m; sourceTree = "<group>"; };
+		4D506D3B16B939450042582B /* UIImage+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+HHCompatibility.h"; path = "HHCompatibility/UIImage+HHCompatibility.h"; sourceTree = "<group>"; };
+		4D506D3C16B939450042582B /* UIImage+HHCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+HHCompatibility.m"; path = "HHCompatibility/UIImage+HHCompatibility.m"; sourceTree = "<group>"; };
+		4D506D4016B94D270042582B /* UIImageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageSpec.m; sourceTree = "<group>"; };
+		4D506D4216B94D9F0042582B /* myGirl.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myGirl.JPG; sourceTree = "<group>"; };
 		4D85162416A02CCB00558FB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4D8516B216A13F5200558FB3 /* UIViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerSpec.m; sourceTree = "<group>"; };
 		4DC2C16A16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetRepresentation+HHCompatibility.h"; sourceTree = "<group>"; };
@@ -167,6 +175,7 @@
 			children = (
 				4D4A30C6168EB45A003F8FD3 /* HHCompatibilityCallSpec.m */,
 				4D8516B216A13F5200558FB3 /* UIViewControllerSpec.m */,
+				4D506D4016B94D270042582B /* UIImageSpec.m */,
 				4D4A30C0168EB45A003F8FD3 /* Supporting Files */,
 			);
 			path = HHCompatibilityTests;
@@ -175,6 +184,7 @@
 		4D4A30C0168EB45A003F8FD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D506D4216B94D9F0042582B /* myGirl.JPG */,
 				4D4A30C1168EB45A003F8FD3 /* HHCompatibilityTests-Info.plist */,
 				4D4A30C2168EB45A003F8FD3 /* InfoPlist.strings */,
 			);
@@ -196,6 +206,8 @@
 			children = (
 				4DFB2AA3169DA4D90095A290 /* UIViewController+HHCompatibility.h */,
 				4DFB2AA4169DA4D90095A290 /* UIViewController+HHCompatibility.m */,
+				4D506D3B16B939450042582B /* UIImage+HHCompatibility.h */,
+				4D506D3C16B939450042582B /* UIImage+HHCompatibility.m */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -275,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4A30C4168EB45A003F8FD3 /* InfoPlist.strings in Resources */,
+				4D506D4316B94D9F0042582B /* myGirl.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +345,7 @@
 				4D4A30B0168EB459003F8FD3 /* HHCompatibility.m in Sources */,
 				4D4CF97316A00D5200C9BEC1 /* UIViewController+HHCompatibility.m in Sources */,
 				4DC2C16C16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */,
+				4D506D3D16B939450042582B /* UIImage+HHCompatibility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +356,8 @@
 				4D4A30C7168EB45A003F8FD3 /* HHCompatibilityCallSpec.m in Sources */,
 				4D8516B316A13F5200558FB3 /* UIViewControllerSpec.m in Sources */,
 				4DC2C16D16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */,
+				4D506D3E16B939450042582B /* UIImage+HHCompatibility.m in Sources */,
+				4D506D4116B94D270042582B /* UIImageSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

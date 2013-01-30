@@ -10,7 +10,7 @@
 
 #define kUIImageEncodeKey @"UIImageData"
 
-@implementation UIImage (HHCompatibility)
+@implementation UIImage (HHCompatibility_5_0)
 
 - (void)hh_encodeWithCoder:(NSCoder *)aCoder
 {

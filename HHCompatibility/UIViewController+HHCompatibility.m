@@ -8,7 +8,7 @@
 
 #import "UIViewController+HHCompatibility.h"
 
-@implementation UIViewController (HHCompatibility)
+@implementation UIViewController (HHCompatibility_5_0)
 
 
 - (UIViewController *)hh_presentedViewController

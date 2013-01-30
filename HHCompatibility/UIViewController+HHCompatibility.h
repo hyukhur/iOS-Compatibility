@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (HHCompatibility)
+@interface UIViewController (HHCompatibility_5_0)
 
 @end

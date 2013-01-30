@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (HHCompatibility) <NSCoding>
+@interface UIImage (HHCompatibility_5_0) <NSCoding>
 
 @end

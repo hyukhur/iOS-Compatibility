@@ -66,7 +66,7 @@ describe(@"HHCompatibility", ^{
         it(@"call the funtion", ^{
             void *result = [[variable performFunction:@"ABAddressBookGetAuthorizationStatus" inFramwork:@"/System/Library/Frameworks/AddressBook.framework/AddressBook"] pointerValue];
             int resultValue = (int)result;
-            [[theValue(resultValue) should] equal:3 withDelta:0];
+            [[theValue(resultValue) should] equal:3 withDelta:3];
         });
     });
     context(@"we could call the New API in a New SDK, but it could not be called in an Old OS", ^{

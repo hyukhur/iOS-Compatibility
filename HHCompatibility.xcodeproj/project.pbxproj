@@ -29,6 +29,7 @@
 		4D8516B316A13F5200558FB3 /* UIViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8516B216A13F5200558FB3 /* UIViewControllerSpec.m */; };
 		4D91E66316CFC64E00180085 /* HHOrderedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91E66216CFC64E00180085 /* HHOrderedSet.m */; };
 		4D91E66816D0616600180085 /* NSOrderedSetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91E66616D0616600180085 /* NSOrderedSetSpec.m */; };
+		4D91E67C16D3DDFB00180085 /* NSArraySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91E67B16D3DDFB00180085 /* NSArraySpec.m */; };
 		4DC2C16C16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2C16B16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m */; };
 		4DC2C16D16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2C16B16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m */; };
 		4DC2C16F16AB0364007FDADD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC2C16E16AB0364007FDADD /* AssetsLibrary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -84,6 +85,7 @@
 		4D91E66116CFC64E00180085 /* HHOrderedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HHOrderedSet.h; path = HHCompatibility/HHOrderedSet.h; sourceTree = "<group>"; };
 		4D91E66216CFC64E00180085 /* HHOrderedSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HHOrderedSet.m; path = HHCompatibility/HHOrderedSet.m; sourceTree = "<group>"; };
 		4D91E66616D0616600180085 /* NSOrderedSetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOrderedSetSpec.m; sourceTree = "<group>"; };
+		4D91E67B16D3DDFB00180085 /* NSArraySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArraySpec.m; sourceTree = "<group>"; };
 		4DC2C16A16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetRepresentation+HHCompatibility.h"; sourceTree = "<group>"; };
 		4DC2C16B16AB0257007FDADD /* ALAssetRepresentation+HHCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetRepresentation+HHCompatibility.m"; sourceTree = "<group>"; };
 		4DC2C16E16AB0364007FDADD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -188,6 +190,7 @@
 				4D506D4016B94D270042582B /* UIImageSpec.m */,
 				4D4A30C0168EB45A003F8FD3 /* Supporting Files */,
 				4D91E66616D0616600180085 /* NSOrderedSetSpec.m */,
+				4D91E67B16D3DDFB00180085 /* NSArraySpec.m */,
 			);
 			path = HHCompatibilityTests;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				4D506D4116B94D270042582B /* UIImageSpec.m in Sources */,
 				4D82575016CBCEA300751D33 /* NSArray+HHCompatibility.m in Sources */,
 				4D91E66816D0616600180085 /* NSOrderedSetSpec.m in Sources */,
+				4D91E67C16D3DDFB00180085 /* NSArraySpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

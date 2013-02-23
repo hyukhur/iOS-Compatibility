@@ -11,6 +11,8 @@
 #import <string.h>
 #import <objc/runtime.h>
 
+#import "HHOrderedSet.h"
+
 
 #define HH_THREE_WAY_PASTER_INNER(a, b, c) a ## b ## c
 #define HH_THREE_WAY_PASTER(x,y,z) HH_THREE_WAY_PASTER_INNER(x,y,z)
@@ -160,6 +162,16 @@ void HHMethodAdding(Class aClass, BOOL aIsInstance, SEL aOriginalSelector, SEL a
 }
 
 
+void HHClassAdding(const char *aClassName, Class aOriginalClass, Class aCompatibiltyClass)
+{
+    if (!aOriginalClass)
+    {
+        Class sCompatibilityClass = objc_allocateClassPair(aCompatibiltyClass, aClassName, 0);
+        objc_registerClassPair(sCompatibilityClass);
+    }
+}
+
+
 @implementation HHCompatibility (HHPrivate)
 
 - (NSString *)validFrameworkName:(NSString *)originalName
@@ -219,7 +231,6 @@ void HHMethodAdding(Class aClass, BOOL aIsInstance, SEL aOriginalSelector, SEL a
 }
 
 
-
 + (void)load
 {
     if ([NSObject instanceMethodForSelector:@selector(hh_methodSignatureForSelector:)] != [@"" methodForSelector:@selector(methodSignatureForSelector:)])
@@ -230,6 +241,7 @@ void HHMethodAdding(Class aClass, BOOL aIsInstance, SEL aOriginalSelector, SEL a
     {
         HHMethodSwizzle([NSObject class], NO, @selector(forwardInvocation:), @selector(hh_forwardInvocation:));
     }
+    HHClassAdding("NSOrderedSet", [NSOrderedSet class], [HHOrderedSet class]);
 }
 
 

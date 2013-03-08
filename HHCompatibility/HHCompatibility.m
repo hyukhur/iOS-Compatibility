@@ -162,11 +162,11 @@ void HHMethodAdding(Class aClass, BOOL aIsInstance, SEL aOriginalSelector, SEL a
 }
 
 
-void HHClassAdding(const char *aClassName, Class aOriginalClass, Class aCompatibiltyClass)
+void HHClassAdding(const char *aOriginalClassName, const char *aCompatibiltyClassName)
 {
-    if (!aOriginalClass)
+    if (!objc_getClass(aOriginalClassName))
     {
-        Class sCompatibilityClass = objc_allocateClassPair(aCompatibiltyClass, aClassName, 0);
+        Class sCompatibilityClass = objc_allocateClassPair(objc_getClass(aCompatibiltyClassName), aOriginalClassName, 0);
         objc_registerClassPair(sCompatibilityClass);
     }
 }
@@ -241,7 +241,7 @@ void HHClassAdding(const char *aClassName, Class aOriginalClass, Class aCompatib
     {
         HHMethodSwizzle([NSObject class], NO, @selector(forwardInvocation:), @selector(hh_forwardInvocation:));
     }
-    HHClassAdding("NSOrderedSet", [NSOrderedSet class], [HHOrderedSet class]);
+    HHClassAdding("NSOrderedSet", "HHOrderedSet");
 }
 
 

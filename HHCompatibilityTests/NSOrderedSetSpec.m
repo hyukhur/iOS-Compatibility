@@ -1,6 +1,6 @@
 #import "HHCompatibility.h"
 #import <Kiwi/Kiwi.h>
-
+#import <objc/runtime.h>
 
 SPEC_BEGIN(NSOrderedSetSpec)
 describe(@"NSOrderedSet Compatibility Spec", ^{
@@ -16,7 +16,7 @@ describe(@"NSOrderedSet Compatibility Spec", ^{
             thirdObject = @"thirdObject";
         });
         it(@"NSOrderedSet new method could be worked", ^{
-            variable = [NSOrderedSet orderedSet];
+            variable = [objc_getClass(@"NSOrderedSet".UTF8String) orderedSet];
             [variable shouldNotBeNil];
             variable = [NSOrderedSet orderedSetWithObject:firstObject];
             [variable shouldNotBeNil];

@@ -33,9 +33,9 @@ describe(@"NSOrderedSet Compatibility Spec", ^{
             [variable shouldNotBeNil];
             variable = [HHClass(NSOrderedSet) orderedSetWithArray:[NSArray arrayWithObjects:firstObject, secondObject, thirdObject, nil]];
             [variable shouldNotBeNil];
-            variable = [HHClass(NSOrderedSet) orderedSetWithArray:[HHClass(NSOrderedSet) orderedSetWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:YES];
+            variable = [HHClass(NSOrderedSet) orderedSetWithArray:[NSArray arrayWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:YES];
             [variable shouldNotBeNil];
-            variable = [HHClass(NSOrderedSet) orderedSetWithArray:[HHClass(NSOrderedSet) orderedSetWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:NO];
+            variable = [HHClass(NSOrderedSet) orderedSetWithArray:[NSArray arrayWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:NO];
             [variable shouldNotBeNil];
             variable = [HHClass(NSOrderedSet) orderedSetWithSet:[NSSet setWithObjects:firstObject, secondObject, thirdObject, nil]];
             [variable shouldNotBeNil];
@@ -60,11 +60,11 @@ describe(@"NSOrderedSet Compatibility Spec", ^{
             [variable shouldNotBeNil];
             variable = [[HHClass(NSOrderedSet) alloc] initWithArray:[NSArray arrayWithObjects:firstObject, secondObject, thirdObject, nil]];
             [variable shouldNotBeNil];
-            variable = [[HHClass(NSOrderedSet) alloc] initWithArray:[HHClass(NSOrderedSet) orderedSetWithObjects:firstObject, secondObject, thirdObject, nil] copyItems:YES];
+            variable = [[HHClass(NSOrderedSet) alloc] initWithArray:[NSArray arrayWithObjects:firstObject, secondObject, thirdObject, nil] copyItems:YES];
             [variable shouldNotBeNil];
-            variable = [[HHClass(NSOrderedSet) alloc] initWithArray:[HHClass(NSOrderedSet) orderedSetWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:YES];
+            variable = [[HHClass(NSOrderedSet) alloc] initWithArray:[NSArray arrayWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:YES];
             [variable shouldNotBeNil];
-            variable = [[HHClass(NSOrderedSet) alloc] initWithArray:[HHClass(NSOrderedSet) orderedSetWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:NO];
+            variable = [[HHClass(NSOrderedSet) alloc] initWithArray:[NSArray arrayWithObjects:firstObject, secondObject, thirdObject, nil] range:NSMakeRange(1, 2) copyItems:NO];
             [variable shouldNotBeNil];
             variable = [[HHClass(NSOrderedSet) alloc] initWithSet:[NSSet setWithObjects:firstObject, secondObject, thirdObject, nil]];
             [variable shouldNotBeNil];

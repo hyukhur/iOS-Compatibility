@@ -9,6 +9,9 @@
 #import "HHOrderedSet.h"
 
 @implementation HHOrderedSet
+{
+    NSArray *_realArray;
+}
 
 //- (NSUInteger)count;
 //- (id)objectAtIndex:(NSUInteger)idx;
@@ -38,8 +41,16 @@
 //- (NSEnumerator *)reverseObjectEnumerator;
 //
 //- (NSOrderedSet *)reversedOrderedSet;
-//- (NSArray *)array;
-//- (NSSet *)set;
+- (NSArray *)array
+{
+    return _realArray;
+}
+
+
+- (NSSet *)set
+{
+    return [NSSet setWithArray:_realArray];
+}
 
 #if NS_BLOCKS_AVAILABLE
 
@@ -74,6 +85,7 @@
 {
     return [[super alloc] init];
 }
+
 
 + (id)orderedSetWithObject:(id)object
 {
@@ -135,12 +147,20 @@
 
 - (id)initWithObject:(id)object
 {
-    return [super initWithObjects:object, nil];
+    self = [super init];
+    if (self) {
+        _realArray = [NSArray arrayWithObject:object];
+    }
+    return self;
 }
 
 - (id)initWithObjects:(const id [])objects count:(NSUInteger)cnt
 {
-    return [super initWithObjects:objects count:cnt];
+    self = [super init];
+    if (self) {
+        _realArray = [NSArray arrayWithObjects:objects count:cnt];
+    }
+    return self;
 }
 
 - (id)initWithObjects:(id)firstObj, ... /*NS_REQUIRES_NIL_TERMINATION*/
@@ -163,32 +183,45 @@
 
 - (id)initWithOrderedSet:(NSOrderedSet *)set
 {
-    return [super initWithArray:set.array];
+    self = [super init];
+    if (self) {
+        _realArray = [NSArray arrayWithArray:set.array];
+    }
+    return self;
 }
 
 - (id)initWithOrderedSet:(NSOrderedSet *)set copyItems:(BOOL)flag
 {
-    return [super initWithArray:set.array copyItems:flag];
+    return [self initWithArray:set.array copyItems:flag];
 }
 
 - (id)initWithOrderedSet:(NSOrderedSet *)set range:(NSRange)range copyItems:(BOOL)flag
 {
-    return [super initWithArray:[set.array subarrayWithRange:range] copyItems:flag];
+    return [self initWithArray:[set.array subarrayWithRange:range] copyItems:flag];
+}
+
+- (id)initWithArray:(NSArray *)set copyItems:(BOOL)flag
+{
+    self = [super init];
+    if (self) {
+        _realArray = [[NSArray alloc] initWithArray:set copyItems:flag];
+    }
+    return self;
 }
 
 - (id)initWithArray:(NSArray *)set range:(NSRange)range copyItems:(BOOL)flag
 {
-    return [super initWithArray:[set subarrayWithRange:range] copyItems:flag];
+    return [self initWithArray:[set subarrayWithRange:range] copyItems:flag];
 }
 
 - (id)initWithSet:(NSSet *)set
 {
-    return [super initWithArray:set.allObjects];
+    return [self initWithArray:set.allObjects];
 }
 
 - (id)initWithSet:(NSSet *)set copyItems:(BOOL)flag
 {
-    return [super initWithArray:set.allObjects copyItems:flag];
+    return [self initWithArray:set.allObjects copyItems:flag];
 }
 
 @end

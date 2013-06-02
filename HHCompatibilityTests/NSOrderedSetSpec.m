@@ -71,6 +71,15 @@ describe(@"NSOrderedSet Compatibility Spec", ^{
             variable = [[HHClass(NSOrderedSet) alloc] initWithSet:[NSSet setWithObjects:firstObject, secondObject, thirdObject, nil] copyItems:YES];
             [variable shouldNotBeNil];
         });
+        it(@"NSOrderedSet has array's properties", ^{
+            variable = [[HHClass(NSOrderedSet) alloc] initWithObject:firstObject];
+            [[theValue([variable count]) should] equal:1 withDelta:0.f];
+
+            variable = [[HHClass(NSOrderedSet) alloc] initWithObjects:firstObject, secondObject, thirdObject, nil];
+            [[theValue([variable count]) should] equal:3 withDelta:0.f];
+            [[theValue([variable indexOfObject:secondObject]) should] equal:1 withDelta:0];
+            [[theValue([variable objectAtIndex:1]) should] equal:secondObject];
+        });
     });
 });
 SPEC_END

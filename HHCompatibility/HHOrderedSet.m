@@ -13,9 +13,20 @@
     NSArray *_realArray;
 }
 
-//- (NSUInteger)count;
-//- (id)objectAtIndex:(NSUInteger)idx;
-//- (NSUInteger)indexOfObject:(id)object;
+- (NSUInteger)count
+{
+    return _realArray.count;
+}
+
+- (id)objectAtIndex:(NSUInteger)idx
+{
+    return [_realArray objectAtIndex:idx];
+}
+
+- (NSUInteger)indexOfObject:(id)object
+{
+    return [_realArray indexOfObject:object];
+}
 
 @end
 

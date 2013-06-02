@@ -12,5 +12,7 @@ target :test, :exclusive => true do
 #    pod 'OCHamcrest' # Hamcrest for Objective-C: Powerful, combinable, extensible matchers for verification.
 #    pod 'OCMock'     # OCMock is an Objective-C implementation of mock objects
 #    pod 'CocoaLumberjack'    # logging
+# pod 'MAObjCRuntime' # ObjC wrapper for ObjC runtime API.
+
 end
 
